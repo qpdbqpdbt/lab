@@ -31,8 +31,10 @@ header {
   }
   
   .header_logo img {
-	width: 150px; /* 横幅を200pxに指定 */
+	width: 180px; /* 横幅を200pxに指定 */
 	height: auto; /* 高さは画像の比率を保ったまま自動調整 */
+  margin-top: 10px;    /* 上側 */
+  margin-left: 10px;    /* 左側 */
   }
 
 /* メインセクション */
@@ -88,7 +90,7 @@ h2 {
   line-height: 0.8; /* 行間を狭くする（フォントサイズの1.2倍） */
   }
 h3 {
-  font-size: 1rem;
+  font-size: 0.7rem;
   margin-bottom: 50px;
   letter-spacing: 0.5em; /* フォントサイズの10%分の間隔を追加 */
   }
@@ -109,7 +111,7 @@ h3 {
 	width: 500px; /* 横幅を500pxに固定 */
 	height: auto; /* 縦横比を維持 */
 	border-radius: 10px; /* 必要に応じて角丸を追加 */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
   }
 
 /* game */
@@ -352,6 +354,7 @@ footer {
 /* ロゴ部分 */
 .footer-logo img {
   width: 120px; /* ロゴの幅 */
+  height: auto;
   margin: 10px auto;
   display: block; /* 中央揃え */
 }
