@@ -62,7 +62,7 @@ header {
     margin: 80px 0 auto; /* 上下の余白と中央揃え */
     }
   h3 {
-	  font-size: 1rem;
+	  font-size: 0.7rem;
 	  letter-spacing: 0.5em; /* フォントサイズの10%分の間隔を追加 */
     text-align: center; /* 複数行テキストの中央揃え */
     margin-bottom: 100px;
