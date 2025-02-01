@@ -1,0 +1,364 @@
+/* 全体のリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #17224E;
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px; /* ヘッダーの高さ */
+	background-color: transparent; /* 必要に応じて背景色を設定 */
+  }
+  
+  .header_logo {
+	position: absolute;
+	top: 10px; /* 上からの余白 */
+	left: 10px; /* 左からの余白 */
+  }
+  
+  .header_logo img {
+	width: 150px; /* 横幅を200pxに指定 */
+	height: auto; /* 高さは画像の比率を保ったまま自動調整 */
+  }
+
+/* メインセクション */
+main {
+  padding: 2rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ボタン */
+button {
+  background: #4CAF50;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 0.5rem;
+  }
+}
+
+/* common */
+hr {
+  border: 0; /* デフォルトの線を削除 */
+  height: 1px; /* 線の太さを設定 */
+  background-color: #8c98cd; /* 線の色を指定 */
+  width: 80vw; /* 線の横幅を調整 */
+  margin: 10px auto; /* 上下の余白と中央揃え */
+  border-radius: 2px; /* 線の角を丸める */
+  }
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  line-height: 0.8; /* 行間を狭くする（フォントサイズの1.2倍） */
+  }
+h3 {
+  font-size: 1rem;
+  margin-bottom: 50px;
+  letter-spacing: 0.5em; /* フォントサイズの10%分の間隔を追加 */
+  }
+
+/* kv */
+
+#kv{
+	display: flex; /* Flexboxを使用 */
+	justify-content: center; /* 横方向の中央揃え */
+	align-items: center; /* 縦方向の中央揃え */
+	height: 100vh; /* 画面全体の高さ */
+	background-color: #ffffff; /* 必要なら背景色を指定 */
+	margin: 0; /* セクションの余白をリセット */
+  width: 100vw; /* ビューポートの横幅を100%にする */
+  min-width: 100%; /* 予防策として100%を確保 */
+}
+#kv img {
+	width: 500px; /* 横幅を500pxに固定 */
+	height: auto; /* 縦横比を維持 */
+	border-radius: 10px; /* 必要に応じて角丸を追加 */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
+  }
+
+/* game */
+#game {
+	display: flex; /* Flexbox を使用 */
+	flex-direction: column; /* コンテンツを縦方向に並べる */
+	justify-content: center; /* 縦方向の中央揃え */
+	align-items: center; /* 横方向の中央揃え */
+	height: 100vh; /* セクションを画面全体の高さに設定 */
+	background-color: #ffffff; /* 必要に応じて背景色を設定 */
+	color: #17224E; /* テキストカラーを指定 */
+	padding: 20px;
+	text-align: center; /* 複数行テキストの中央揃え */
+  width: 100vw; /* ビューポートの横幅を100%にする */
+  min-width: 100%; /* 予防策として100%を確保 */
+  }
+  #game img {
+	width: 100px; /* 横幅を500pxに固定 */
+	height: auto; /* 縦横比を維持 */
+	border-radius: 10px; /* 角を10px丸める */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
+	border: 1px solid #6974a5; /* 5pxの濃い灰色の実線 */
+  }
+  #game p {
+	font-size: 1rem;
+	line-height: 1.5;
+  color: #6974a5; /* テキストカラーを指定 */
+  }
+  /* company */
+#company {
+	display: flex; /* Flexbox を使用 */
+	flex-direction: column; /* コンテンツを縦方向に並べる */
+	justify-content: center; /* 縦方向の中央揃え */
+	align-items: center; /* 横方向の中央揃え */
+	height: 100vh; /* セクションを画面全体の高さに設定 */
+	background-color: #EFF6FF; /* 必要に応じて背景色を設定 */
+	color: #17224E; /* テキストカラーを指定 */
+	padding: 20px;
+	text-align: center; /* 複数行テキストの中央揃え */
+  width: 100vw; /* ビューポートの横幅を100%にする */
+  min-width: 100%; /* 予防策として100%を確保 */
+  }
+  #company p {
+	font-size: 1rem;
+	line-height: 1.5;
+  }
+  /* テーブル全体のスタイル */
+.custom-table {
+	margin: 0 auto; /* テーブル自体をブラウザの中央に配置 */
+	width: 80%;
+	border-collapse: collapse; /* 枠線を結合 */
+	font-size: 16px;
+	text-align: left;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+	padding: 10px;
+	border-bottom: 1px dashed #8c98cd; /* 下線を破線に設定 */
+	vertical-align: top; /* 複数行の場合に上揃え */
+  color: #17224E; /* テキストカラーを指定 */
+  }
+  
+  .custom-table th {
+	font-weight: normal; /* デフォルトの太字を解除 */
+  }
+  
+  /* contact */
+#contact {
+	display: flex; /* Flexbox を使用 */
+	flex-direction: column; /* コンテンツを縦方向に並べる */
+	justify-content: center; /* 縦方向の中央揃え */
+	align-items: center; /* 横方向の中央揃え */
+	height: 100vh; /* セクションを画面全体の高さに設定 */
+	background-color: #ffffff; /* 必要に応じて背景色を設定 */
+	color: #17224E; /* テキストカラーを指定 */
+	padding: 20px;
+	text-align: center; /* 複数行テキストの中央揃え */
+  width: 100vw; /* ビューポートの横幅を100%にする */
+  min-width: 100%; /* 予防策として100%を確保 */
+  }
+  
+/* フォームコンテナ */
+.form-container {
+    max-width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* 狭い画面でも柔軟に折り返し */
+    gap: 20px;
+}
+
+/* ラベルと入力欄をまとめる */
+.form-group {
+    display: flex;
+    flex-direction: row; /* ラベルと入力欄を横並びに */
+    align-items: center; /* ラベルと入力欄を縦方向に中央揃え */
+    width: 100%; /* 親要素幅いっぱいに対応 */
+    gap: 10px; /* ラベルと入力欄の間隔 */
+}
+
+/* ラベル部分 */
+.form-group label {
+    flex: 0 0 180px; /* ラベルの幅を固定 */
+    text-align: left; /* 左揃え */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: flex-start; /* 左揃え */
+}
+
+/* お問い合わせ内容だけを上寄せにする */
+.form-group.textarea-group {
+    align-items: flex-start;
+}
+
+/* 入力欄部分 */
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* テキストエリア（特別な高さを設定） */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.label-text {
+  display: inline-block;
+  white-space: nowrap; /* 改行を防止 */
+}
+
+.required-mark {
+  display: inline-block;
+  color: red; /* 必須マークの赤色 */
+  margin-left: 5px; /* ラベルと必須マークの間隔を調整 */
+  font-size: 0.75rem; /* 文字サイズを小さく（例: 12px相当） */
+  vertical-align: top; /* 文字を少し上寄せに調整（任意） */
+}
+
+/* 送信ボタン */
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit {
+    background-color: #ffffff;
+    color: #17224E;
+    padding: 10px 50px;
+    border: 1px solid #17224E;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.submit:hover {
+    background-color: #f0f0f0;
+    border-color: #666666;
+}
+
+/* エラーコンテナ */
+#error-container {
+  display: none; /* 初期状態では非表示 */
+  background-color: transparent; /* 背景を透明に */
+  color: red; /* テキストカラーを赤に設定 */
+  padding: 10px;
+  margin-bottom: 20px; /* ボタンとの間隔 */
+  font-size: 0.875rem; /* 少し小さめの文字サイズ */
+  list-style-type: none; /* リストマークを削除 */
+  border: none; /* 枠線を削除 */
+}
+
+/* エラーメッセージのリスト */
+.error-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* リストマークを削除 */
+}
+
+.error-list li {
+  margin-bottom: 5px; /* 各エラーメッセージの間隔 */
+  font-weight: bold;
+}
+
+/* 入力フィールドのエラースタイル */
+.error {
+  border: 2px solid red; /* 赤い枠線でエラーを強調 */
+  outline: none;
+}
+
+/* レスポンシブ対応（モバイル向け） */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+}
+
+/* footer */
+footer {
+  background-color: #17224E; /* フッターの背景色 */
+  color: #fff; /* テキスト色 */
+  text-align: center; /* テキストの中央揃え */
+  padding: 20px 10px; /* フッター全体の余白 */
+  font-family: Arial, sans-serif;
+}
+
+/* リンク部分のスタイル */
+.footer-links ul {
+  list-style: none; /* リストのデフォルトスタイルを削除 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並び */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 30px; /* リンク間のスペース */
+}
+
+.footer-links a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #fff; /* リンクの色 */
+  font-size: 0.7rem; /* フォントサイズ */
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* ホバー時の色変更 */
+}
+
+/* ロゴ部分 */
+.footer-logo img {
+  width: 120px; /* ロゴの幅 */
+  margin: 10px auto;
+  display: block; /* 中央揃え */
+}
+
+/* 著作権部分のスタイル */
+footer p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #ccc;
+}

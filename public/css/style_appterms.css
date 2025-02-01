@@ -1,0 +1,158 @@
+/* 全体のリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #17224E;
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px; /* ヘッダーの高さ */
+	background-color: transparent; /* 必要に応じて背景色を設定 */
+  }
+  
+  .header_logo {
+	position: absolute;
+	top: 10px; /* 上からの余白 */
+	left: 10px; /* 左からの余白 */
+  }
+  
+  .header_logo img {
+	width: 150px; /* 横幅を200pxに指定 */
+	height: auto; /* 高さは画像の比率を保ったまま自動調整 */
+  }
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 0.5rem;
+  }
+}
+
+  /* common */
+  hr {
+    border: 0; /* デフォルトの線を削除 */
+    height: 1px; /* 線の太さを設定 */
+    background-color: #555; /* 線の色を指定 */
+    width: 80vw; /* 線の横幅を調整 */
+    border-radius: 2px; /* 線の角を丸める */
+    margin: 10px auto; /* 上下の余白と中央揃え */
+    }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 0.8; /* 行間を狭くする（フォントサイズの1.2倍） */
+    text-align: center; /* 複数行テキストの中央揃え */
+    margin: 80px 0 auto; /* 上下の余白と中央揃え */
+    }
+  h3 {
+	  font-size: 1rem;
+	  letter-spacing: 0.5em; /* フォントサイズの10%分の間隔を追加 */
+    text-align: center; /* 複数行テキストの中央揃え */
+    margin-bottom: 100px;
+    }
+   h4 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 3rem 0 1rem auto; /* 上下の余白と中央揃え */
+    font-weight: normal;
+    }
+
+  /* content */
+#content {
+	display: flex; /* Flexbox を使用 */
+	align-items: center; /* 横方向の中央揃え */
+	background-color: #ffffff; /* 必要に応じて背景色を設定 */
+	color: #17224E; /* テキストカラーを指定 */
+  width: 80vw; /* 線の横幅を調整 */
+  margin: 50px auto; /* 上下の余白と中央揃え */
+
+  }
+#content p{
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: left;
+  margin: 20px auto; /* 上下の余白と中央揃え */
+  }
+
+#content ul {
+  list-style: none; /* デフォルトの「・」を非表示にする */
+  padding-left: 0;
+}
+#content ol {
+  list-style-type: decimal; /* 番号の形式を指定 */
+  list-style-position: outside; /* 番号をリスト項目の外側に配置 */
+  padding-left: 2.5em; /* リスト全体の余白を調整 */
+}
+#content ol li{
+  text-indent: 0; /* 負のインデントを解除 */
+  margin-left: 0; /* 左余白を調整 */
+  line-height: 1.6; /* 行間を少し広げる（任意） */
+}
+
+#content li {
+  position: relative; /* 擬似要素の基準位置を設定 */
+  font-weight: normal; /* 太字を解除 */
+  line-height: 1.75;
+}
+
+/* footer */
+footer {
+  background-color: #17224E; /* フッターの背景色 */
+  color: #fff; /* テキスト色 */
+  text-align: center; /* テキストの中央揃え */
+  padding: 20px 10px; /* フッター全体の余白 */
+  font-family: Arial, sans-serif;
+}
+
+/* リンク部分のスタイル */
+.footer-links ul {
+  list-style: none; /* リストのデフォルトスタイルを削除 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並び */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 30px; /* リンク間のスペース */
+}
+
+.footer-links a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #fff; /* リンクの色 */
+  font-size: 0.7rem; /* フォントサイズ */
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* ホバー時の色変更 */
+}
+
+/* ロゴ部分 */
+.footer-logo img {
+  width: 120px; /* ロゴの幅 */
+  margin: 10px auto;
+  display: block; /* 中央揃え */
+}
+
+/* 著作権部分のスタイル */
+footer p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #ccc;
+}

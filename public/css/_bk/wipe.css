@@ -1,0 +1,74 @@
+
+
+figure img {
+  display: block;
+}
+
+
+.wipein {
+  position: relative;
+  opacity: 0;
+}
+.wipein img {
+  opacity: 0;
+}
+.wipein:after {
+  display: block;
+  content: "";
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+}
+.wipein.show {
+  animation: wipecolor 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+.wipein.show:after {
+  animation: wipebar 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+.wipein.show img {
+  animation: wipeimg 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+}
+
+@keyframes wipebar {
+  0% {
+    left: 0;
+    right: 100%;
+  }
+  50% {
+    left: 0;
+    right: 0;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+  }
+}
+@keyframes wipecolor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes wipeimg {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
