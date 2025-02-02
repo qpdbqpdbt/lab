@@ -5,13 +5,15 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   background-color: #ffffff;
   color: #17224E;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* 横スクロールを無効化 */
+  width: 100%;
 }
 
 /* header */
@@ -104,15 +106,23 @@ h3 {
 	height: 100vh; /* 画面全体の高さ */
 	background-color: #ffffff; /* 必要なら背景色を指定 */
 	margin: 0; /* セクションの余白をリセット */
-  width: 100vw; /* ビューポートの横幅を100%にする */
+  width: 100%; /* 100vwを使わず、親要素の幅いっぱいにする */
   min-width: 100%; /* 予防策として100%を確保 */
 }
 #kv img {
 	width: 500px; /* 横幅を500pxに固定 */
+  max-width: 100%; /* 画像が親要素を超えないようにする */
 	height: auto; /* 縦横比を維持 */
 	border-radius: 10px; /* 必要に応じて角丸を追加 */
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
   }
+/* スマホ向けの調整 */
+@media (max-width: 768px) {
+  #kv img {
+    width: 80%; /* ビューポートの80%にする */
+    max-width: 300px; /* 最大幅を300pxに */
+  }
+}
 
 /* game */
 #game {
