@@ -199,18 +199,19 @@ h3 {
   }
   
   /* contact */
-#contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 上寄せに */
-  align-items: center;
-  background-color: #ffffff;
-  color: #17224E;
-  padding: 40px 20px; /* 余白を調整 */
-  text-align: center;
-  width: 100%;
-  height: auto; /* これが重要！ */
-  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向の中央揃え */
+    align-items: center; /* 横方向の中央揃え */
+    height: 100vh; /* セクションを画面全体の高さに設定 */
+    background-color: #ffffff; /* 必要に応じて背景色を設定 */
+    color: #17224E; /* テキストカラーを指定 */
+    padding: 20px;
+    text-align: center; /* 複数行テキストの中央揃え */
+    width: 100vw; /* ビューポートの横幅を100%にする */
+    min-width: 100%; /* 予防策として100%を確保 */
+    }
   
 /* フォームコンテナ */
 .form-container {
@@ -232,26 +233,6 @@ h3 {
     gap: 10px; /* ラベルと入力欄の間隔 */
 }
 
-/* スマホ（600px以下）での調整 */
-@media (max-width: 600px) {
-  .form-group {
-      flex-direction: column; /* ラベルと入力欄を縦並び */
-      align-items: flex-start;
-      gap: 5px; /* 行間を狭める */
-  }
-
-  .form-group label {
-      flex: none; /* 幅を固定しない */
-      width: 100%; /* スマホでは100%幅に */
-      text-align: left; /* 左寄せ */
-  }
-
-  .form-group input,
-  .form-group textarea {
-      width: 100%; /* 幅いっぱいに */
-  }
-}
-
 /* ラベル部分 */
 .form-group label {
     flex: 0 0 180px; /* ラベルの幅を固定 */
@@ -259,7 +240,6 @@ h3 {
     font-weight: bold;
     white-space: nowrap; /* ラベルの折り返しを防ぐ */
 }
-
 
 /* お問い合わせ内容だけを上寄せにする */
 .form-group.textarea-group {
@@ -283,7 +263,10 @@ h3 {
   align-items: flex-start;
 }
 .textarea-group textarea {
-  height: 100px;
+  min-height: 100px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 /* テキストエリア（特別な高さを設定） */
@@ -357,17 +340,30 @@ textarea {
   border: 2px solid red; /* 赤い枠線でエラーを強調 */
   outline: none;
 }
-
-/* レスポンシブ対応（モバイル向け） */
+/* スマホ（600px以下）での調整 */
 @media (max-width: 600px) {
-    .form-container {
-        flex-direction: column;
-    }
+  .form-group {
+      flex-direction: column; /* ラベルと入力欄を縦並び */
+      align-items: flex-start;
+      gap: 5px; /* 行間を狭める */
+  }
 
-    .form-group {
-        width: 100%;
-    }
+  .form-group label {
+      flex: none; /* 幅を固定しない */
+      width: 100%; /* スマホでは100%幅に */
+      text-align: left; /* 左寄せ */
+  }
+
+  .form-group input,
+  .form-group textarea {
+      width: 100%; /* 幅いっぱいに */
+  }
+  .textarea-group textarea {
+    height: 120px;
+    min-height: 100px;
+  }
 }
+
 
 /* footer */
 footer {
