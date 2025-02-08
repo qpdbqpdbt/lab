@@ -1,0 +1,44 @@
+/* footer */
+footer {
+  background-color: #17224E; /* フッターの背景色 */
+  color: #fff; /* テキスト色 */
+  text-align: center; /* テキストの中央揃え */
+  padding: 20px 10px; /* フッター全体の余白 */
+  font-family: Arial, sans-serif;
+}
+
+/* リンク部分のスタイル */
+.footer-links ul {
+  list-style: none; /* リストのデフォルトスタイルを削除 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並び */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 30px; /* リンク間のスペース */
+}
+
+.footer-links a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #fff; /* リンクの色 */
+  font-size: 0.7rem; /* フォントサイズ */
+}
+
+.footer-links a:hover {
+  color: #8c98cd; /* ホバー時の色変更 */
+}
+
+/* ロゴ部分 */
+.footer-logo img {
+  width: 120px; /* ロゴの幅 */
+  height: auto;
+  margin: 10px auto;
+  display: block; /* 中央揃え */
+}
+
+/* 著作権部分のスタイル */
+footer p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #ccc;
+}
