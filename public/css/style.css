@@ -197,31 +197,29 @@ h3 {
     vertical-align: top; /* 複数行の場合に上揃え */
     color: #17224E; /* テキストカラーを指定 */
   }
-
-
   
   /* contact */
 #contact {
-	display: flex; /* Flexbox を使用 */
-	flex-direction: column; /* コンテンツを縦方向に並べる */
-	justify-content: center; /* 縦方向の中央揃え */
-	align-items: center; /* 横方向の中央揃え */
-	height: 100vh; /* セクションを画面全体の高さに設定 */
-	background-color: #ffffff; /* 必要に応じて背景色を設定 */
-	color: #17224E; /* テキストカラーを指定 */
-	padding: 20px;
-	text-align: center; /* 複数行テキストの中央揃え */
-  width: 100vw; /* ビューポートの横幅を100%にする */
-  min-width: 100%; /* 予防策として100%を確保 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 上寄せに */
+  align-items: center;
+  background-color: #ffffff;
+  color: #17224E;
+  padding: 40px 20px; /* 余白を調整 */
+  text-align: center;
+  width: 100%;
+  height: auto; /* これが重要！ */
   }
   
 /* フォームコンテナ */
 .form-container {
-    max-width: 65%;
+    width: 90%; /* 画面幅の90%を使う */
+    max-width: 600px; /* 最大幅を制限 */
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* 狭い画面でも柔軟に折り返し */
-    gap: 20px;
+    flex-direction: column; /* 強制的に縦並び */
+    gap: 10px; /* 適度な余白 */
 }
 
 /* ラベルと入力欄をまとめる */
@@ -229,8 +227,29 @@ h3 {
     display: flex;
     flex-direction: row; /* ラベルと入力欄を横並びに */
     align-items: center; /* ラベルと入力欄を縦方向に中央揃え */
+    justify-content: flex-start;
     width: 100%; /* 親要素幅いっぱいに対応 */
     gap: 10px; /* ラベルと入力欄の間隔 */
+}
+
+/* スマホ（600px以下）での調整 */
+@media (max-width: 600px) {
+  .form-group {
+      flex-direction: column; /* ラベルと入力欄を縦並び */
+      align-items: flex-start;
+      gap: 5px; /* 行間を狭める */
+  }
+
+  .form-group label {
+      flex: none; /* 幅を固定しない */
+      width: 100%; /* スマホでは100%幅に */
+      text-align: left; /* 左寄せ */
+  }
+
+  .form-group input,
+  .form-group textarea {
+      width: 100%; /* 幅いっぱいに */
+  }
 }
 
 /* ラベル部分 */
@@ -238,10 +257,9 @@ h3 {
     flex: 0 0 180px; /* ラベルの幅を固定 */
     text-align: left; /* 左揃え */
     font-weight: bold;
-    display: flex;
-    flex-direction: column; /* 子要素を縦に並べる */
-    align-items: flex-start; /* 左揃え */
+    white-space: nowrap; /* ラベルの折り返しを防ぐ */
 }
+
 
 /* お問い合わせ内容だけを上寄せにする */
 .form-group.textarea-group {
@@ -252,11 +270,20 @@ h3 {
 .form-group input,
 .form-group textarea {
     flex: 1;
+    width: 100%;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+/* テキストエリアの特別調整 */
+.textarea-group {
+  align-items: flex-start;
+}
+.textarea-group textarea {
+  height: 100px;
 }
 
 /* テキストエリア（特別な高さを設定） */
