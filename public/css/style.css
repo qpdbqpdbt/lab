@@ -39,34 +39,6 @@ header {
   margin-left: 10px;    /* 左側 */
   }
 
-/* メインセクション */
-main {
-  padding: 2rem;
-}
-
-.section {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* ボタン */
-button {
-  background: #4CAF50;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #45a049;
-}
-
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   header h1 {
@@ -85,7 +57,7 @@ hr {
   border: 0; /* デフォルトの線を削除 */
   height: 1px; /* 線の太さを設定 */
   background-color: #8c98cd; /* 線の色を指定 */
-  width: 80vw; /* 線の横幅を調整 */
+  width: 70vw; /* 線の横幅を調整 */
   margin: 10px auto; /* 上下の余白と中央揃え */
   border-radius: 2px; /* 線の角を丸める */
   }
@@ -176,7 +148,7 @@ h3 {
   /* テーブル全体のスタイル */
 .custom-table {
 	margin: 0 auto; /* テーブル自体をブラウザの中央に配置 */
-	width: 90%;
+	width: 60%;
 	border-collapse: collapse; /* 枠線を結合 */
 	font-size: 1rem;
 	text-align: left;
@@ -362,6 +334,17 @@ textarea {
     height: 120px;
     min-height: 100px;
   }
+  #game,
+  #company,
+  #contact {
+    height: 150vh; /* スマホのときは高さを150vhに */
+  }
+  .custom-table {
+    width: 90%;
+    }
+  hr {
+    width: 90vw; /* 線の横幅を調整 */
+    }
 }
 
 
@@ -392,7 +375,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #ffcc00; /* ホバー時の色変更 */
+  color: #8c98cd; /* ホバー時の色変更 */
 }
 
 /* ロゴ部分 */
