@@ -28,7 +28,7 @@ body {
     margin-bottom: 10px;
     line-height: 0.8; /* 行間を狭くする（フォントサイズの1.2倍） */
     text-align: center; /* 複数行テキストの中央揃え */
-    margin: 80px 0 auto; /* 上下の余白と中央揃え */
+    margin: 130px 0 auto; /* 上下の余白と中央揃え */
     }
   h3 {
 	  font-size: 0.7rem;
@@ -44,14 +44,16 @@ body {
     font-weight: normal;
     }
 
+
   /* content */
 #content {
-	display: flex; /* Flexbox を使用 */
-	align-items: center; /* 横方向の中央揃え */
-	background-color: #ffffff; /* 必要に応じて背景色を設定 */
-	color: #17224E; /* テキストカラーを指定 */
-  width: 80vw; /* 線の横幅を調整 */
-  margin: 50px auto; /* 上下の余白と中央揃え */
+  display: flex; /* Flexbox を使用 */
+  flex-direction: column; /* 縦方向に並べる */
+  align-items: center; /* 中央揃え */
+  background-color: #ffffff;
+  color: #17224E;
+  width: 60%; /* 幅を60%に統一 */
+  margin: 50px auto; /* 上下の余白を確保しつつ中央揃え */
 
   }
 #content p{
@@ -64,6 +66,7 @@ body {
 #content ul {
   list-style: none; /* デフォルトの「・」を非表示にする */
   padding-left: 0;
+  margin: 1rem auto 2rem auto;
 }
 
 #content li {
@@ -80,47 +83,8 @@ body {
   font-size: 1rem; /* サイズを調整 */
   font-weight: normal; /* 太字を解除 */
 }
-
-/* footer */
-footer {
-  background-color: #17224E; /* フッターの背景色 */
-  color: #fff; /* テキスト色 */
-  text-align: center; /* テキストの中央揃え */
-  padding: 20px 10px; /* フッター全体の余白 */
-  font-family: Arial, sans-serif;
-}
-
-/* リンク部分のスタイル */
-.footer-links ul {
-  list-style: none; /* リストのデフォルトスタイルを削除 */
-  padding: 0;
-  margin: 0;
-  display: flex; /* 横並び */
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center; /* 縦方向の中央揃え */
-  gap: 30px; /* リンク間のスペース */
-}
-
-.footer-links a {
-  text-decoration: none; /* リンクの下線を削除 */
-  color: #fff; /* リンクの色 */
-  font-size: 0.7rem; /* フォントサイズ */
-}
-
-.footer-links a:hover {
-  color: #ffcc00; /* ホバー時の色変更 */
-}
-
-/* ロゴ部分 */
-.footer-logo img {
-  width: 120px; /* ロゴの幅 */
-  margin: 10px auto;
-  display: block; /* 中央揃え */
-}
-
-/* 著作権部分のスタイル */
-footer p {
-  font-size: 12px;
-  margin-top: 10px;
-  color: #ccc;
-}
+@media (max-width: 600px) {
+  #content{
+    width: 80%; /* 幅を60%に統一 */
+  }
+  }

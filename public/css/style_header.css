@@ -16,10 +16,46 @@ header {
   
   .header_logo img {
 	width: 180px; /* 横幅を200pxに指定 */
+  width: 20%; /* 横幅を500pxに固定 */
 	height: auto; /* 高さは画像の比率を保ったまま自動調整 */
   margin-top: 10px;    /* 上側 */
   margin-left: 10px;    /* 左側 */
   }
+
+  /* スマホ向けの調整 */
+  @media (max-width: 768px) {
+    .header_logo img {
+      width: 20%; /* ビューポートの80%にする */
+    }
+  }
+
+.language-switch {
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 16px; /* 文字サイズを大きくする */
+}
+
+.language-switch a {
+    text-decoration: none;
+    color: #a1a1a1;
+}
+
+.language-switch a:hover {
+    text-decoration: underline;
+}
+
+/* 下線を太くする */
+.current {
+    color: #17224E;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* 下線の太さを指定 */
+    font-weight: bold;
+    cursor: default;
+    text-underline-offset: 8px; /* 下線とテキストの間隔調整 */
+}
+
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {

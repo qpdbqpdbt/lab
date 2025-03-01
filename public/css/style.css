@@ -44,14 +44,14 @@ h3 {
 	justify-content: center; /* 横方向の中央揃え */
 	align-items: center; /* 縦方向の中央揃え */
 	height: 100vh; /* 画面全体の高さ */
-	background-color: #ffffff; /* 必要なら背景色を指定 */
+	background-color: #eef7f9; /* 必要なら背景色を指定 */
 	margin: 0; /* セクションの余白をリセット */
   width: 100%; /* 100vwを使わず、親要素の幅いっぱいにする */
   min-width: 100%; /* 予防策として100%を確保 */
 }
 #kv img {
-	width: 500px; /* 横幅を500pxに固定 */
-  max-width: 100%; /* 画像が親要素を超えないようにする */
+	width: 90%; /* 横幅を500pxに固定 */
+  max-width: 1100px; /* 画像が親要素を超えないようにする */
 	height: auto; /* 縦横比を維持 */
 	border-radius: 10px; /* 必要に応じて角丸を追加 */
   display: block; /* インライン要素の余白を防ぐ */
@@ -60,8 +60,7 @@ h3 {
 /* スマホ向けの調整 */
 @media (max-width: 768px) {
   #kv img {
-    width: 80%; /* ビューポートの80%にする */
-    max-width: 300px; /* 最大幅を300pxに */
+    width: 90%; /* ビューポートの80%にする */
   }
 }
 
@@ -71,8 +70,8 @@ h3 {
 	flex-direction: column; /* コンテンツを縦方向に並べる */
 	justify-content: center; /* 縦方向の中央揃え */
 	align-items: center; /* 横方向の中央揃え */
-	height: 100vh; /* セクションを画面全体の高さに設定 */
-	background-color: #ffffff; /* 必要に応じて背景色を設定 */
+	height: 50vh; /* セクションを画面全体の高さに設定 */
+	background-color: #eef7f9; /* 必要に応じて背景色を設定 */
 	color: #17224E; /* テキストカラーを指定 */
 	padding: 20px;
 	text-align: center; /* 複数行テキストの中央揃え */
@@ -80,7 +79,7 @@ h3 {
   min-width: 100%; /* 予防策として100%を確保 */
   }
   #game img {
-	width: 100px; /* 横幅を500pxに固定 */
+	width: 400px; /* 横幅を500pxに固定 */
 	height: auto; /* 縦横比を維持 */
 	border-radius: 10px; /* 角を10px丸める */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0); /* 必要に応じて影を追加 */
@@ -97,8 +96,8 @@ h3 {
 	flex-direction: column; /* コンテンツを縦方向に並べる */
 	justify-content: center; /* 縦方向の中央揃え */
 	align-items: center; /* 横方向の中央揃え */
-	height: 100vh; /* セクションを画面全体の高さに設定 */
-	background-color: #EFF6FF; /* 必要に応じて背景色を設定 */
+	height: 70vh; /* セクションを画面全体の高さに設定 */
+	background-color: #fcfdff; /* 必要に応じて背景色を設定 */
 	color: #17224E; /* テキストカラーを指定 */
 	padding: 20px;
 	text-align: center; /* 複数行テキストの中央揃え */
@@ -112,7 +111,7 @@ h3 {
   /* テーブル全体のスタイル */
 .custom-table {
 	margin: 0 auto; /* テーブル自体をブラウザの中央に配置 */
-	width: 60%;
+	width: 70%;
 	border-collapse: collapse; /* 枠線を結合 */
 	font-size: 1rem;
 	text-align: left;
@@ -128,7 +127,7 @@ h3 {
   .custom-table th {
     font-weight: normal;
     white-space: nowrap; /* 折り返しを防ぐ */
-    padding: 10px;
+    padding: 10px 40px 10px 10px;
     border-bottom: 1px dashed #8c98cd; /* 下線を破線に設定 */
     vertical-align: top; /* 複数行の場合に上揃え */
     color: #17224E; /* テキストカラーを指定 */
@@ -140,8 +139,8 @@ h3 {
     flex-direction: column;
     justify-content: center; /* 縦方向の中央揃え */
     align-items: center; /* 横方向の中央揃え */
-    height: 100vh; /* セクションを画面全体の高さに設定 */
-    background-color: #ffffff; /* 必要に応じて背景色を設定 */
+    height: 70vh; /* セクションを画面全体の高さに設定 */
+    background-color: #eef7f9; /* 必要に応じて背景色を設定 */
     color: #17224E; /* テキストカラーを指定 */
     padding: 20px;
     text-align: center; /* 複数行テキストの中央揃え */
@@ -298,11 +297,17 @@ textarea {
     height: 120px;
     min-height: 100px;
   }
-  #game,
+  #game {
+    height: 80vh; /* スマホのときは高さを150vhに */
+  }
+
   #company,
   #contact {
-    height: 150vh; /* スマホのときは高さを150vhに */
+    height: 100vh; /* スマホのときは高さを150vhに */
   }
+  #game img {
+    width: 80%; /* 横幅を500pxに固定 */
+    }
   .custom-table {
     width: 90%;
     }
